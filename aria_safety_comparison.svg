@@ -1,0 +1,270 @@
+<svg width="700" height="400" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <radialGradient id="inflammationGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff5722;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d32f2f;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="edemagradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ffab91;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ff8a65;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <linearGradient id="safetyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42a5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1976d2;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="brainGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#e1f5fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b3e5fc;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Pattern for microbleeds -->
+    <pattern id="microbleedPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#d32f2f" opacity="0.8"/>
+    </pattern>
+    
+    <!-- Antibody symbol -->
+    <g id="antibodySymbol">
+      <!-- Heavy chains -->
+      <ellipse cx="0" cy="-8" rx="12" ry="4" fill="#9e9e9e" stroke="#616161" stroke-width="1"/>
+      <ellipse cx="-8" cy="2" rx="6" ry="10" fill="#9e9e9e" stroke="#616161" stroke-width="1"/>
+      <ellipse cx="8" cy="2" rx="6" ry="10" fill="#9e9e9e" stroke="#616161" stroke-width="1"/>
+      <!-- Light chains -->
+      <ellipse cx="-8" cy="-2" rx="3" ry="8" fill="#757575" stroke="#424242" stroke-width="1"/>
+      <ellipse cx="8" cy="-2" rx="3" ry="8" fill="#757575" stroke="#424242" stroke-width="1"/>
+      <!-- Fc region -->
+      <ellipse cx="0" cy="12" rx="8" ry="6" fill="#616161" stroke="#424242" stroke-width="1"/>
+    </g>
+    
+    <!-- MDC molecule -->
+    <g id="mdcMolecule">
+      <circle cx="0" cy="0" r="6" fill="url(#safetyGradient)" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="white">Zn</text>
+      <circle cx="-8" cy="-5" r="2" fill="#42a5f5"/>
+      <circle cx="8" cy="-5" r="2" fill="#42a5f5"/>
+      <circle cx="0" cy="8" r="2" fill="#42a5f5"/>
+    </g>
+    
+    <!-- Inflammation burst -->
+    <g id="inflammationBurst">
+      <circle cx="0" cy="0" r="8" fill="url(#inflammationGradient)" stroke="#d32f2f" stroke-width="1"/>
+      <path d="M-6,-6 L0,0 L6,-6 M-6,6 L0,0 L6,6 M-8,0 L0,0 L8,0 M0,-8 L0,0 L0,8" stroke="#ff1744" stroke-width="2" stroke-linecap="round"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="white">⚡</text>
+    </g>
+    
+    <!-- Safety shield -->
+    <g id="safetyShield">
+      <path d="M0,-8 Q-6,-6 -6,0 Q-6,6 0,8 Q6,6 6,0 Q6,-6 0,-8 Z" fill="url(#safetyGradient)" stroke="#1976d2" stroke-width="1.5"/>
+      <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">✓</text>
+    </g>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="400" fill="#f5f5f5"/>
+  
+  <!-- Title -->
+  <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">
+    ARIA Risk Profile: AAB-003 vs MDC-CRNZ-χ1
+  </text>
+  
+  <!-- Center divider -->
+  <line x1="350" y1="50" x2="350" y2="350" stroke="#bdbdbd" stroke-width="2" stroke-dasharray="4,4"/>
+  
+  <!-- LEFT PANEL: AAB-003 ARIA Risk -->
+  <g transform="translate(175, 200)">
+    <!-- Background brain tissue (inflamed) -->
+    <ellipse cx="0" cy="0" rx="120" ry="80" fill="#ffccbc" stroke="#ff8a65" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Amyloid plaque -->
+    <circle cx="-30" cy="-20" r="18" fill="#ffab91" stroke="#ff5722" stroke-width="2" opacity="0.9"/>
+    <circle cx="-35" cy="-18" r="3" fill="#ff5722"/>
+    <circle cx="-25" cy="-22" r="2" fill="#ff5722"/>
+    <circle cx="-30" cy="-15" r="2.5" fill="#ff5722"/>
+    <circle cx="-28" cy="-25" r="2" fill="#ff5722"/>
+    
+    <!-- AAB-003 antibody bound to plaque -->
+    <use href="#antibodySymbol" transform="translate(-30, -35)"/>
+    
+    <!-- FcγR activation on microglia -->
+    <g transform="translate(-60, 10)">
+      <ellipse cx="0" cy="0" rx="15" ry="10" fill="#ffab91" stroke="#ff5722" stroke-width="2"/>
+      <use href="#inflammationBurst" transform="translate(0, 0) scale(0.8)"/>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#d32f2f" font-weight="bold">
+        Activated Microglia
+      </text>
+    </g>
+    
+    <!-- Edema cloud -->
+    <ellipse cx="20" cy="-10" rx="40" ry="25" fill="url(#edemagradient)" stroke="#ff8a65" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="20" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#d32f2f">
+      ARIA-E
+    </text>
+    <text x="20" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#ff5722">
+      (Edema)
+    </text>
+    
+    <!-- Microbleeds pattern -->
+    <rect x="30" y="20" width="30" height="20" fill="url(#microbleedPattern)" opacity="0.7"/>
+    <text x="45" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#d32f2f" font-weight="bold">
+      ARIA-H (Microbleeds)
+    </text>
+    
+    <!-- Inflammation markers -->
+    <g transform="translate(60, -30)">
+      <circle cx="0" cy="0" r="6" fill="#ff5722" opacity="0.8"/>
+      <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="white">IL-1β</text>
+      <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#d32f2f">↑ TNF-α</text>
+    </g>
+    
+    <!-- Panel label -->
+    <text x="0" y="-110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d32f2f">
+      AAB-003 (IgG4 Antibody)
+    </text>
+    <text x="0" y="-95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ff5722">
+      FcγR-Mediated Inflammation
+    </text>
+    
+    <!-- Risk indicators -->
+    <g transform="translate(0, 110)">
+      <rect x="-80" y="0" width="160" height="40" fill="rgba(244, 67, 54, 0.1)" stroke="#f44336" stroke-width="1" rx="5"/>
+      <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#d32f2f">
+        ⚠️ High ARIA Risk Profile
+      </text>
+      <text x="0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#d32f2f">
+        17% ARIA-E in ApoE4 • 12% Microbleeds • 13% Discontinuation
+      </text>
+    </g>
+  </g>
+  
+  <!-- RIGHT PANEL: MDC-CRNZ-χ1 Safety -->
+  <g transform="translate(525, 200)">
+    <!-- Background brain tissue (healthy) -->
+    <ellipse cx="0" cy="0" rx="120" ry="80" fill="url(#brainGradient)" stroke="#42a5f5" stroke-width="2"/>
+    
+    <!-- Blood-brain barrier (intact) -->
+    <ellipse cx="0" cy="0" rx="122" ry="82" fill="none" stroke="#1976d2" stroke-width="3" opacity="0.6"/>
+    
+    <!-- MDC-CRNZ-χ1 molecules distributed -->
+    <use href="#mdcMolecule" transform="translate(-30, -20) scale(1.2)"/>
+    <use href="#mdcMolecule" transform="translate(20, -10) scale(0.8)"/>
+    <use href="#mdcMolecule" transform="translate(-10, 15) scale(1.0)"/>
+    <use href="#mdcMolecule" transform="translate(40, 25) scale(0.9)"/>
+    
+    <!-- ROS neutralization effect -->
+    <g transform="translate(-50, -30)">
+      <circle cx="0" cy="0" r="12" fill="none" stroke="#42a5f5" stroke-width="2" stroke-dasharray="4,4" opacity="0.7"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1976d2">
+        ROS↓
+      </text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1976d2">
+        Quenched
+      </text>
+    </g>
+    
+    <!-- Tau disruption -->
+    <g transform="translate(30, -40)">
+      <path d="M-8,-5 Q0,-8 8,-5 Q10,0 8,5 Q0,8 -8,5 Q-10,0 -8,-5" fill="none" stroke="#42a5f5" stroke-width="2" stroke-dasharray="2,2"/>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1976d2">
+        Tau Disrupted
+      </text>
+    </g>
+    
+    <!-- Safety shield -->
+    <use href="#safetyShield" transform="translate(50, 10) scale(1.5)"/>
+    
+    <!-- No immune activation indicator -->
+    <g transform="translate(-60, 20)">
+      <circle cx="0" cy="0" r="15" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4caf50">
+        ✓
+      </text>
+      <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#4caf50" font-weight="bold">
+        No FcγR Binding
+      </text>
+    </g>
+    
+    <!-- Panel label -->
+    <text x="0" y="-110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1976d2">
+      MDC-CRNZ-χ1 (Synthetic)
+    </text>
+    <text x="0" y="-95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#42a5f5">
+      Immune-Silent Design
+    </text>
+    
+    <!-- Safety indicators -->
+    <g transform="translate(0, 110)">
+      <rect x="-80" y="0" width="160" height="40" fill="rgba(76, 175, 80, 0.1)" stroke="#4caf50" stroke-width="1" rx="5"/>
+      <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2e7d32">
+        ✅ ARIA-Free Safety Profile
+      </text>
+      <text x="0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#4caf50">
+        0% ARIA Risk • No Microbleeds • SEI Score: 8.7
+      </text>
+    </g>
+  </g>
+  
+  <!-- Center comparison chart -->
+  <g transform="translate(350, 300)">
+    <rect x="-60" y="-40" width="120" height="80" fill="white" stroke="#bdbdbd" stroke-width="1" rx="5"/>
+    <text x="0" y="-25" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">
+      ARIA Risk Comparison
+    </text>
+    
+    <!-- ARIA-E comparison -->
+    <g transform="translate(0, -10)">
+      <text x="-55" y="0" font-family="Arial, sans-serif" font-size="8" fill="#666">ARIA-E:</text>
+      <rect x="-12" y="-5" width="15" height="8" fill="#f44336"/>
+      <text x="-7" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">17%</text>
+      <rect x="5" y="-5" width="1" height="8" fill="#4caf50"/>
+      <text x="15" y="0" text-anchor="start" font-family="Arial, sans-serif" font-size="6" fill="#4caf50" font-weight="bold">0%</text>
+    </g>
+    
+    <!-- Microbleeds comparison -->
+    <g transform="translate(0, 5)">
+      <text x="-55" y="0" font-family="Arial, sans-serif" font-size="8" fill="#666">Microbleeds:</text>
+      <rect x="-10" y="-5" width="12" height="8" fill="#ff5722"/>
+      <text x="-5" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">12%</text>
+      <rect x="5" y="-5" width="1" height="8" fill="#4caf50"/>
+      <text x="15" y="0" text-anchor="start" font-family="Arial, sans-serif" font-size="6" fill="#4caf50" font-weight="bold">0%</text>
+    </g>
+    
+    <!-- Withdrawal comparison -->
+    <g transform="translate(0, 20)">
+      <text x="-55" y="0" font-family="Arial, sans-serif" font-size="8" fill="#666">Withdrawal:</text>
+      <rect x="-10" y="-5" width="13" height="8" fill="#ff9800"/>
+      <text x="-7" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">13%</text>
+      <rect x="5" y="-5" width="1" height="8" fill="#4caf50"/>
+      <text x="15" y="0" text-anchor="start" font-family="Arial, sans-serif" font-size="6" fill="#4caf50" font-weight="bold">&lt;1%</text>
+    </g>
+  </g>
+  
+  <!-- Key mechanism annotations -->
+  <g transform="translate(350, 80)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">
+      Key Safety Difference
+    </text>
+    <text x="-120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d32f2f">
+      FcγR Activation → Neuroinflammation
+    </text>
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">
+      No Immune Receptor Binding
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(600, 6)">
+    <rect x="0" y="0" width="90" height="60" fill="white" stroke="#bdbdbd" stroke-width="1" rx="3"/>
+    <text x="45" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2c3e50">
+      Legend
+    </text>
+    <circle cx="10" cy="25" r="3" fill="#f44336"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="7" fill="#666">ARIA Risk</text>
+    <circle cx="10" cy="35" r="3" fill="#4caf50"/>
+    <text x="20" y="38" font-family="Arial, sans-serif" font-size="7" fill="#666">Safety</text>
+    <use href="#inflammationBurst" transform="translate(10, 48) scale(0.5)"/>
+    <text x="20" y="50" font-family="Arial, sans-serif" font-size="7" fill="#666">Inflammation</text>
+  </g>
+</svg>
