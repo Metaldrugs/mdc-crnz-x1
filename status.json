@@ -1,0 +1,34 @@
+{
+  "rescue_id": "AAB003X1",
+  "drug_name": "AAB-003 (Crenezumab Analog)",
+  "status": {
+    "current_phase": "Proposal Published",
+    "last_update": "2025-06-05T13:14:00Z",
+    "workflow_state": "Open for Partnering",
+    "sei_validation": true,
+    "tier": 2,
+    "blueprint_id": "MDC-CRNZ-χ1"
+  },
+  "milestones": [
+    {
+      "date": "2025-06-05",
+      "event": "SEI Blueprint Generated",
+      "description": "MDC-CRNZ-χ1 created using Moleculogic rescue logic"
+    },
+    {
+      "date": "2025-06-05",
+      "event": "Proposal Page Published",
+      "description": "Rescue report made available at /rescues/AAB003X1/proposal.html"
+    },
+    {
+      "date": "2025-06-05",
+      "event": "Outreach Message Drafted",
+      "description": "Prepared Roche-focused outreach message for neuroscience partnership"
+    }
+  ],
+  "next_actions": [
+    "Send initial outreach to Roche",
+    "Upload overview.pdf and blueprint structure asset",
+    "Monitor SEI overlay scoring for tier upgrade to Tier 3"
+  ]
+}

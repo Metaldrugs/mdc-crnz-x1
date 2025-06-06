@@ -1,0 +1,48 @@
+{
+  "blueprint_id": "MDC-CRNZ-χ1",
+  "rescue_target": "AAB-003",
+  "drug_name": "MDC-CRNZ-χ1",
+  "rescue_type": "SEI Synthetic Redesign",
+  "sei_score": 8.7,
+  "molecular_weight": 542,
+  "logp": 2.1,
+  "entropy_class": "Stable-Class I",
+  "created_by": "SEI-AUTOGEN",
+  "created_at": "2025-06-05T13:00:00Z",
+  "core_design": {
+    "metal_center": "Zn²⁺",
+    "architecture": "Three-Arm Complex",
+    "arms": {
+      "bbb_pass_arm": {
+        "mechanism": "LogP-optimized, small molecule size for BBB penetration",
+        "feature": "CNS permeability tuning"
+      },
+      "stacking_interrupter": {
+        "mechanism": "π-π system disruption of Aβ and tau aggregates",
+        "feature": "Neurofibrillary tangle destabilization"
+      },
+      "ros_buffer_arm": {
+        "mechanism": "Thiol/selenol hybrid neutralizes ROS",
+        "feature": "Oxidative stress reduction"
+      }
+    }
+  },
+  "mechanism_summary": "Synthetic Zn²⁺-centered complex designed to overcome AAB-003 failures by improving BBB penetration, targeting both Aβ and tau, and preventing ARIA via immune-silent ROS buffering.",
+  "safety_advantages": [
+    "No antibody-mediated inflammation",
+    "ARIA risk eliminated",
+    "Immune-silent design",
+    "Direct ROS scavenging"
+  ],
+  "clinical_forecast": {
+    "predicted_cognitive_stabilization": "74%",
+    "recommended_trial_duration": "18 months",
+    "biomarker_positive_patients": true
+  },
+  "visual_assets": [
+    "assets/metal_core.svg",
+    "assets/bbb_penetration.svg",
+    "assets/ros_protection.svg"
+  ],
+  "tier_level": 3
+}

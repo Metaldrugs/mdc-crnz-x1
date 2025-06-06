@@ -1,0 +1,41 @@
+{
+  "rescue_id": "AAB003X1",
+  "drug_name": "AAB-003",
+  "rescue_target": "Alzheimer’s Disease",
+  "status": "Proposal Published",
+  "tier": 2,
+  "blueprint": {
+    "blueprint_id": "MDC-CRNZ-χ1",
+    "type": "Metal-Drug Complex",
+    "sei_score": 8.7,
+    "confidence_score": 0.91,
+    "entropy_class": "Moderate-Stable",
+    "risk_level": "Low",
+    "generated_by": "SEI-AUTOGEN",
+    "created_at": "2025-06-05T12:34:00Z"
+  },
+  "access": {
+    "url": "https://platform.metaldrug.com/rescues/AAB003X1/proposal.html",
+    "token": "ALZ-RESCUE"
+  },
+  "sponsor_targets": [
+    "Roche",
+    "AC Immune",
+    "Biogen",
+    "Cassava Sciences"
+  ],
+  "next_steps": [
+    "Send outreach to Roche",
+    "Add asset structure diagram to assets/",
+    "Monitor SEI overlay score drift",
+    "Prepare sandbox simulation (Tier 3 preview)"
+  ],
+  "linked_files": {
+    "proposal": "proposal.html",
+    "blueprint": "blueprint.json",
+    "overview": "overview.pdf",
+    "status": "status.json",
+    "contacts": "contacts.json",
+    "readme": "README.md"
+  }
+}
